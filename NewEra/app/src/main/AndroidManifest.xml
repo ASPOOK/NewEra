@@ -2,13 +2,27 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.aspook.newera">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE"/> -->
+    <queries>
+        <package android:name="com.twitter.android" />
+    </queries>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NewEra">
+        <activity
+            android:name="com.aspook.jsengine.V8TestActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.aspook.jsengine.QuickJSActivity"
+            android:exported="true" />
         <activity
             android:name=".ScrollingActivity"
             android:exported="true"
@@ -22,8 +36,17 @@
         </activity>
         <activity
             android:name="com.aspook.compose.ComposeActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true" />
+
+<!--        <provider-->
+<!--            android:name="androidx.core.content.FileProvider"-->
+<!--            android:authorities="${applicationId}.FileProvider"-->
+<!--            android:exported="false"-->
+<!--            android:grantUriPermissions="true">-->
+<!--            <meta-data-->
+<!--                android:name="android.support.FILE_PROVIDER_PATHS"-->
+<!--                android:resource="@xml/file_paths" />-->
+<!--        </provider>-->
     </application>
 
 </manifest>

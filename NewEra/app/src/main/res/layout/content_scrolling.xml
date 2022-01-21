@@ -18,22 +18,74 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/item_margin"
-            android:text="@string/btn_action_1"
+            android:text="@string/btn_action_compose"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_quick_js"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/item_margin"
+            android:text="@string/btn_action_quick_js"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_v8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/item_margin"
+            android:text="@string/btn_action_v8"
             android:textAllCaps="false" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/item_margin"
-            android:text="@string/btn_action_2"
+            android:text="@string/btn_action_x"
             android:textAllCaps="false" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/item_margin"
-            android:text="@string/btn_action_3"
+            android:text="@string/btn_action_x"
             android:textAllCaps="false" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/item_margin"
+            android:text="@string/btn_action_x"
+            android:textAllCaps="false" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/item_margin"
+            android:text="@string/btn_action_x"
+            android:textAllCaps="false" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/item_margin"
+            android:text="@string/btn_action_x"
+            android:textAllCaps="false" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/item_margin"
+            android:text="@string/btn_action_x"
+            android:textAllCaps="false" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/item_margin"
+            android:text="@string/btn_action_x"
+            android:textAllCaps="false" />
+
 
     </LinearLayout>
 

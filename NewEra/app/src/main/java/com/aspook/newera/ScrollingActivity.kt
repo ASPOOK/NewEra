@@ -2,14 +2,17 @@ package com.aspook.newera
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
-import android.view.ViewGroup
 import android.widget.Button
+import androidx.lifecycle.ProcessLifecycleOwner
 import com.aspook.compose.ComposeActivity
 import com.aspook.newera.databinding.ActivityScrollingBinding
+import com.aspook.jsengine.QuickJSActivity
+import com.aspook.jsengine.V8TestActivity
 
 class ScrollingActivity : AppCompatActivity() {
 
@@ -17,7 +20,7 @@ class ScrollingActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        ProcessLifecycleOwner.get().lifecycle.addObserver(ApplicationObserver())
         binding = ActivityScrollingBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -51,11 +54,33 @@ class ScrollingActivity : AppCompatActivity() {
     }
 
     private fun setClickListeners() {
-        val btnCompose: Button = binding.root.findViewById<Button>(R.id.btn_compose)
+        val btnCompose: Button = binding.root.findViewById(R.id.btn_compose)
         btnCompose.setOnClickListener {
             val intent = Intent(this, ComposeActivity::class.java)
             startActivity(intent)
         }
+
+        val btnQuickJS: Button = binding.root.findViewById(R.id.btn_quick_js)
+        btnQuickJS.setOnClickListener {
+            val intent = Intent(this, QuickJSActivity::class.java)
+            startActivity(intent)
+        }
+
+        val btnV8: Button = binding.root.findViewById(R.id.btn_v8)
+        btnV8.setOnClickListener {
+            val intent = Intent(this, V8TestActivity::class.java)
+            startActivity(intent)
+        }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        Log.d("anxiaofei", "onStart");
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.d("anxiaofei", "onStop");
     }
 
 
